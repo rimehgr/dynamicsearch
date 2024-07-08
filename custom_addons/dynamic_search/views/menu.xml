@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Menuitem for Product Management -->
+    <menuitem id="menu_product_root"
+              name="Products"
+              sequence="0"
+              groups="base.group_user"/>
+
+    <!-- Action for Product Search -->
+    <record id="action_product_search" model="ir.actions.act_window">
+        <field name="name">Product Search</field>
+        <field name="res_model">product.product</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Submenu for Product Search -->
+    <menuitem id="menu_product_search"
+              name="Product Search"
+              parent="menu_product_root"
+              sequence="10"
+              action="action_product_search"
+              groups="base.group_user"/>
+</odoo>
+

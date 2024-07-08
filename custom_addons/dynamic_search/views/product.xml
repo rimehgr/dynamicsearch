@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <record id="view_product_search_form" model="ir.ui.view">
+            <field name="name">product.product.search.form</field>
+            <field name="model">product.product</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_searchview">
+                            <div class="oe_searchview_input">
+                                <input placeholder="Search..." name="search" type="text"/>
+                            </div>
+                        </div>
+                        <div class="oe_searchview_results">
+                            <tree class="o_list_view">
+                                <field name="name"/>
+                                <field name="default_code"/>
+                                <field name="description"/>
+                            </tree>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
